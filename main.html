@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Zadanie zaliczeniowe - Patryk Sokolski">
+    <title>Zadanie zaliczeniowe</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            background-image: url("/images/background/background.jpg");
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h3 id="godzina"><span id="hour"></span>:<span id="nullBefore"></span><span id="minutes"></span></h3>
+    <picture><img src="images/wifi/wifi@2px.png" alt="wifi" id="wifi"></picture>
+</header>
+<div id="widget">
+    <table id="widgetTable">
+        <tr>
+            <td><picture><img src="images/calendar/widKalendarz.png" alt="Kalendarz"></picture></td>
+            <td><picture><img src="images/weather/widPogoda.png" alt="pogoda"></picture></td>
+        </tr>
+        <tr>
+            <td>Kalendarz</td>
+            <td>Pogoda</td>
+        </tr>
+    </table>
+</div>
+<div id="mainIcons">
+<table id="firstRow">
+    <tr>
+        <td><picture><img src="images/calendar/calendar@2x.png" alt="kalendarz"></picture></td>
+        <td><picture><img src="images/health/health@2x.png" alt="zdrowie"></picture></td>
+        <td><picture><img src="images/maps/maps@2x.png" alt="mapy"></picture></td>
+        <td><picture><img src="images/messages/messages@2x.png" alt="wiadomości"></picture></td>
+    </tr>
+    <tr>
+        <td>Kalendarz</td>
+        <td>Zdrowie</td>
+        <td>Mapy</td>
+        <td>Wiadomości</td>
+    </tr>
+</table>
+<table id="secondRow">
+    <tr>
+        <td><picture><img src="images/news/news@2x.png" alt="prasa"></picture></td>
+        <td><picture><img src="images/photos/photo@2x.png" alt="zdjęcia"></picture></td>
+        <td><picture><img src="images/reminders/reminders@2x.png" alt="przypomnienia"></picture></td>
+        <td><picture><img src="images/safari/safari@2x.png" alt="Safari"></picture></td>
+    </tr>
+    <tr>
+        <td>Prasa</td>
+        <td>Zdjęcia</td>
+        <td>Przypomnienia</td>
+        <td>Safari</td>
+    </tr>
+</table>
+<table id="thirdRow">
+    <tr>
+        <td><picture><img src="images/settings/settings@2x.png" alt="ustawienia"></picture></td>
+        <td><picture><img src="images/wallet/wallet.svg" alt="portfel"></picture></td>
+        <td><picture><img src="images/meta/facebook.png" alt="facebook"></picture></td>
+        <td><picture><img src="images/mail/mail.png" alt="Mail"></picture></td>
+    </tr>
+    <tr>
+        <td>Ustawienia</td>
+        <td>Portfel</td>
+        <td>Facebook</td>
+        <td>Mail</td>
+    </tr>
+</table>
+</div>
+<span class="dot"></span>
+<span class="dot2"></span>
+<div id="floatContainer">
+    <table id="lastRow">
+        <tr>
+            <td><picture><img src="images/telephone/telephone.png" alt="telefon"></picture></td>
+            <td><picture><img src="images/meta/messenger.png" alt="messenger"></picture></td>
+            <td><picture><img src="images/camera/camera.png" alt="aparat"></picture></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    var datetime = new Date().getHours();
+    console.log(datetime);
+    document.getElementById("hour").textContent = datetime;
+    datetime = new Date().getMinutes();
+    if(datetime<10)
+        document.getElementById("nullBefore").textContent = "0";
+    else
+        document.getElementById("nullBefore").textContent = "";
+    document.getElementById("minutes").textContent = datetime;
+
+</script>
+
+
+</html>

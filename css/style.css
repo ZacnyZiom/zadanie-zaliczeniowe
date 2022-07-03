@@ -1,0 +1,128 @@
+table {
+  width: 100%;
+  padding-top: 15px;
+}
+table td {
+  text-align: center;
+  vertical-align: middle;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: small;
+  color: whitesmoke;
+}
+table td :hover {
+  opacity: 75%;
+}
+table td img {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+}
+table td picture {
+  padding: 10px;
+}
+table td picture :active {
+  border: solid 2px black;
+  margin: -2px;
+}
+
+#floatContainer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+}
+
+#lastRow {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto auto 15px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+#godzina {
+  position: relative;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+#wifi {
+  width: 25px;
+  height: 25px;
+  margin-top: 16px;
+  position: absolute;
+  right: 30px;
+}
+
+#mainIcons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dot, .dot2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  margin: 2px;
+  bottom: 120px;
+}
+
+.dot {
+  right: 50.2%;
+}
+
+.dot2 {
+  left: 50.2%;
+  opacity: 60%;
+}
+
+@media (max-width: 780px) {
+  #widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #widget img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 780px) {
+  #widget {
+    display: none;
+  }
+  #mainIcons table {
+    width: 50%;
+  }
+  #mainIcons table td img {
+    width: 80px;
+    height: 80px;
+  }
+  #firstRow, #thirdRow {
+    padding-right: 0px;
+  }
+  #secondRow {
+    padding-left: 0px;
+  }
+  #floatContainer {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
